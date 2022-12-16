@@ -24,3 +24,6 @@ Like the image below
 and run the python file
 
 All triggers and audit table sql will generate   run that files to your mysql server
+
+![image](https://user-images.githubusercontent.com/54390036/208140100-d9c57603-5f1e-4c6c-aa23-210a3b55edc5.png)
+
