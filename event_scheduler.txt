@@ -28,7 +28,7 @@ CREATE EVENT event_name
     COMMENT 'just description what it is doing'
     DO
       BEGIN
-          UPDATE table_name set amount = 500 WHERE amount > 2700;
+          DELETE FROM table_name WHERE dt < DATE_SUB(NOW(), INTERVAL 3 MONTH);
       END |
 
 delimiter ;
