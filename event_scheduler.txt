@@ -1,0 +1,36 @@
+#enable event scheduler in mysql
+
+SET GLOBAL event_scheduler = ON;
+--------------------------------------------------------------------------------------------------------------
+#mysql event to limt the data in every minit
+
+
+
+delimiter |
+CREATE EVENT event_name
+    ON SCHEDULE
+      EVERY 1 MINUTE
+    COMMENT 'just description what it is doing'
+    DO
+      BEGIN
+        UPDATE table_name set amount = 500 WHERE amount > 2700;
+      END |
+
+delimiter ;
+
+--------------------------------------------------------------------------------------------------------------
+#automaticaly clear the data before a time
+
+delimiter |
+CREATE EVENT event_name
+    ON SCHEDULE
+      EVERY 1 MINUTE
+    COMMENT 'just description what it is doing'
+    DO
+      BEGIN
+          UPDATE table_name set amount = 500 WHERE amount > 2700;
+      END |
+
+delimiter ;
+
+----------------------------------------------------------------------------------------------------------------
